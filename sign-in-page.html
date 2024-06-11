@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register Vehicle Rental System </title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+</head>
+
+<style>
+
+body{
+        
+        background-color:rgb(232, 201, 207);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+    }
+
+
+    .box{
+        height: 460px;
+        width: 350px;
+        background-color:whitesmoke ;
+        /* margin-left: 40%; */
+        /* margin-top: 100px; */
+        display: flex;
+        flex-direction: column;
+        border: 2px solid black;
+        border-radius: 10px;
+        height: fit-content;
+        
+    }
+
+    span{
+        margin-left: 50%;
+        font-weight: bold;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    #span-mail{
+        margin-left: 60%;
+    }
+
+    #span-confirm{
+        margin-left: 30%;
+    }
+
+    h3{
+        text-align: center;
+        font-size: 24px;
+    }
+
+    label{
+        font-size: 17px;
+        margin-left: 10px;
+        margin-top: 10px;
+
+    }
+
+    input{
+        margin-left: 10px;
+        margin-right: 15px;
+        height: 30px;
+        width: 80%;
+        padding-left: 10px;
+        font-size: 17px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+    
+    }
+
+    .enter:focus{
+        border-color: #49bc2d;
+    outline: none;
+    }
+
+    #submit{
+        margin-top: 35px;
+        width: 30%;
+        height: 45px;
+        margin-left: 32%;
+        padding: 12px 0;
+        cursor: pointer;
+        border: none;
+    border-radius: 8px;
+    background-color: #EE534C;
+    color: #fff;
+    font-size: 18px;
+    }
+
+    .login-button
+{
+    margin-top: 20px;
+    margin-bottom: 10px;
+        width: 30%;
+        height: 22px;
+        margin-left: 32%;
+        padding: 12px 0;
+        text-align: center;
+        cursor: pointer;
+        border: none;
+    border-radius: 8px;
+    background-color: #EE534C;
+    color: #fff;
+    font-size: 18px;
+    
+}
+#link-login{
+    text-decoration: none;
+}
+
+
+
+
+@media only screen and (max-width: 576px) {
+      .box{
+        background-color: whitesmoke;
+        /* margin-left: 20%; */
+        height: 500px;
+      }
+      label{
+        font-size: 18px;
+      }
+      input{
+        margin-bottom: 6px;
+        margin-top: 5px;
+      }
+    }
+
+    @media only screen and (max-width:768px) and (min-width: 576px)
+{
+    .box{
+        background-color: whitesmoke;
+        /* margin-left: 30%; */
+      }
+    
+
+}
+
+    
+</style>
+
+<body ng-app="App" ng-controller="my_ctrl">
+    
+    <div class="box">
+        
+        <h3>Register User Details </h3>
+
+        <form name="registration_Form" ng-submit="submitForm()" novalidate>
+
+        <label for="user_name">Username:</label>
+        <input type="text" class="enter" name="user_name" id="user_name" placeholder="Enter Username" ng-model="userName" required>
+        <span ng-show="registration_Form.user_name.$invalid">User name is required.</span> <br>
+
+        <label for="user_id">Mail Id:</label>
+        <input type="email" class="enter" name="login_id" id="user_id" placeholder="Enter UserId" ng-model="email" required>
+        <span id="span-mail" ng-show="registration_Form.login_id.$invalid">Email is required.</span> <br>
+        
+        <label for="password">Password:</label>
+        <input type="password" class="enter" name="login_pwd" id="password" placeholder="**********"  ng-model="password" required>
+        <span ng-show="registration_Form.login_pwd.$invalid">Password is required.</span> <br>
+        
+
+        <label for="Confirm_password">Confirm Password:</label>
+        <input type="text" class="enter" name="Confirm_password" id="Confirm_password" placeholder="Confirm Password" ng-model="confirmPassword" required>
+        <span id="span-confirm" ng-show="registration_Form.Confirm_password.$invalid">Please confirm your password.</span> <br>
+
+
+        <!-- <input type="submit" name="submit" id="submit"> -->
+        
+            
+        
+
+        </form>
+        <button type="submit" id="submit" onclick="submit()">Submit</button>
+
+        <div class="login-button">
+            <button type="submit" onclick="login()"> LOG IN </button>
+        
+        </div>
+        
+
+    </div>
+
+
+</body>
+
+<script>
+
+    function login(){
+        window.location.href="./login-page.html";
+    }
+
+    function submit(){
+        window.location.href="./vehicle_rental_system.html";
+    }
+
+        angular.module('App', [])
+            .controller('my_ctrl', function ($scope) {
+                
+            
+            })
+   
+
+</script>
+
+
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About Us!</title>
+</head>
+
+<style>
+
+nav {
+  background-color:#ff7f50;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+    height: 50px;
+  width: 70px;
+  background-image: url(./logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+    margin-left: 75px;
+}
+
+.logo_1{
+  background-image: url(./logo_1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width: 70px;
+  margin-left: 45px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-right: 150px;
+  font-size: 22px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.search{
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  border-radius: 15px;
+  background-color: whitesmoke;
+  color: green;
+  font-weight: bolder;
+  text-align: center;
+  height: 30px;
+  font-size: 15px;
+}
+
+#Home{
+    height: 665px;
+    width: auto;
+    display: flex;
+}
+
+#home-img{
+float: right;
+}
+
+
+.home-content {
+    max-width: 40%;
+    margin-top: 7%;
+}
+
+.home-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    margin-left: 35px;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.home-content h1 {
+    text-align: center;
+    color: green;
+    font-size: 44px;
+}
+
+
+#join-btn{
+    border: 1px solid black;
+    background-color: whitesmoke;
+    margin-top: 25px;
+    margin-left: 38%;
+    font-size: 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 110px;
+    height: 35px;
+}
+
+#join-btn:hover{
+    background-color: #ff7f50;
+    color: whitesmoke;
+    border: none;
+}
+
+
+.gallery-container {
+    position: relative;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.gallery {
+    position: relative;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.slides img {
+    scroll-snap-align: start;
+    width: 100%;
+    height: auto;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    z-index: 2;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+#Contect{
+    margin-top: 30px;
+    height: 740px;
+    background-color: #f3ccbe;
+}
+
+#contact-img{
+    float: right;
+    /* margin-right: 10px; */
+}
+
+#contact_us{
+    text-align: center;
+    padding-top: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-bottom: 250px;
+}
+
+.contact h3{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#vehicle_img{
+    height: 750px;
+}
+
+</style>
+
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <div class="logo_1"></div>
+        </div>
+        
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#Gallery">Gallery</a></li>
+          <li><a href="#Contect">Contact</a></li>
+          <li><form><input class="search" type="search" placeholder="Search..."></form></li>
+        </ul>
+      </nav>
+      
+      <div id="Home">
+
+        <div class="home-content">
+            <h1>BEST CAR <br> RENTAL DEALS</h1>
+            <p>
+                
+                Here you can find all type of vehicle for rent per hours in very reasonable amount according to vehicle. We have all type of vehicle like Bike Car Scooty Mini-Bus Cycle , With driver and also without driver.  We also provide cab service in intercity and intracity. Our courier services is very safe and quick.
+            </p>
+
+            <input type="submit" value="Join Us" id="join-btn" onclick="joinus()">
+        </div>
+
+        <img src="./car-rent-main-about.jpg" alt="background-home-image" id="home-img">
+
+        
+        
+      </div>
+
+        <div class="gallery-container" id="Gallery">
+            <div class="gallery">
+                <div class="slides">
+                    <img src="./bike_4.png" alt="Image 8" id="vehicle_img">
+                    <img src="./car_1.png" alt="Image 1" id="vehicle_img">
+                    <img src="./bike_1.jpg" alt="Image 2" id="vehicle_img">
+                    <img src="./car_2.jpg" alt="Image 3" id="vehicle_img">
+                    <img src="./car_3.avif" alt="Image 4" id="vehicle_img">
+                    <img src="./bike_2.jpg" alt="Image 5" id="vehicle_img">
+                    <img src="./bike_3.jpg" alt="Image 6" id="vehicle_img">
+                    <img src="./mini-bus.avif" alt="Image 7" id="vehicle_img">
+                </div>
+                <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                <button class="next" onclick="plusSlides(1)">&#10095;</button>
+            </div>
+        </div>
+
+      <div id="Contect">
+        <img src="./contact-img.avif" alt="contact-iamge" id="contact-img">
+        <div class="contact">
+            <h1 id="contact_us">CONTACT US</h1>
+            <h3>Email : piyushgupta2914@gmail.com</h3>
+            <h3>Mob. : 91+ 9352360322</h3>
+            <h3>Add. Bidholi,Dehradun, 248007</h3>
+        </div>
+      </div>
+
+      
+
+</body>
+
+
+<script>
+
+    function joinus(){
+        window.location.href="./login-page.html";
+    }
+
+    
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.querySelectorAll('.slides img');
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+    slides[slideIndex - 1].style.display = 'block';
+}
+
+</script>
+
+</html>
